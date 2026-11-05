@@ -13,10 +13,19 @@ public class PlayerCollision : MonoBehaviour
     private float doorTimer = 0.0f;
     [SerializeField] private float doorOpenTime = 3.0f;
 
+    // Door Sounds
+    [SerializeField] private AudioClip doorOpenSound; 
+    [SerializeField] private AudioClip doorShutSound;
+
+    private new AudioSource audio; // will hold the AudioSource component
+
+    private bool doorIsOpen; // To determine current state of door 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         doorAnimator = door.GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -51,6 +60,14 @@ public class PlayerCollision : MonoBehaviour
     // Custom open door method
     private void OpenDoor()
     {
+        if (!doorIsOpen);
+        {
+            audio.PlayOneShot(doorOpenSound);
+
+            doorIsOpen = true;
+        }
+        audio.PlayOneShot(doorOpenSound);
+
         // set Animator parameter 
         doorAnimator.SetBool("doorOpen", true);
 
@@ -60,6 +77,14 @@ public class PlayerCollision : MonoBehaviour
     // custom shut door method 
     private void ShutDoor()
     {
+        if(doorIsOpen)
+        {
+            audio.PlayOneShot(doorShutSound);
+
+            doorIsOpen = false;
+
+        }
+        
         // Set Animator parameter
         doorAnimator.SetBool("doorOpen", false);
     }

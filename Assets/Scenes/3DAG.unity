@@ -240,11 +240,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710fb539ea86e2042a899a0dc998a4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BatteryCollect
-  pickup1Tex: {fileID: 21300000, guid: 1722f7b7a1427446c82c18ca8eea179b, type: 3}
-  pickup2Tex: {fileID: 21300000, guid: 2b935da67c4214640be7bb935073c6e1, type: 3}
-  pickup3Tex: {fileID: 21300000, guid: 5dafa6a4ad3a142e0b20f6a25d69aaad, type: 3}
-  pickup4Tex: {fileID: 21300000, guid: fb837420ad314429c9fd7e00cd0f3b29, type: 3}
-  pickup0Tex: {fileID: 21300000, guid: ba7851f276e57489f835fbb62d09e2f8, type: 3}
+  pickup1Tex: {fileID: 2800000, guid: 1722f7b7a1427446c82c18ca8eea179b, type: 3}
+  pickup2Tex: {fileID: 2800000, guid: 2b935da67c4214640be7bb935073c6e1, type: 3}
+  pickup3Tex: {fileID: 2800000, guid: 5dafa6a4ad3a142e0b20f6a25d69aaad, type: 3}
+  pickup4Tex: {fileID: 2800000, guid: fb837420ad314429c9fd7e00cd0f3b29, type: 3}
+  pickup0Tex: {fileID: 2800000, guid: ba7851f276e57489f835fbb62d09e2f8, type: 3}
 --- !u!1001 &458594476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -847,6 +847,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Battery (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7962922080639634249, guid: 69bdc93a279e30e4dac51c95ed040e54, type: 3}
+      propertyPath: m_TagString
+      value: pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -924,43 +928,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160732046}
   m_CullTransparentMesh: 1
---- !u!84 &1325423917
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: OptiWaterPlanarReflectionRT
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 94
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1 &1431680529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,6 +1057,43 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!84 &1560096325
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OptiWaterPlanarReflectionRT
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1 &1638331976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,8 +1612,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.0057209153
-  far clip plane: 1144.1831
+  near clip plane: 0.013296206
+  far clip plane: 2659.2412
   field of view: 60.000004
   orthographic: 0
   orthographic size: 5
@@ -1618,7 +1622,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 1325423917}
+  m_TargetTexture: {fileID: 1560096325}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -1636,8 +1640,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824669912}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35287723, y: 0, z: -0.9068535, w: 0.23042239}
-  m_LocalPosition: {x: 731.20807, y: 81.732086, z: 987.33655}
+  m_LocalRotation: {x: 0.034188338, y: -0, z: 0.9877234, w: 0.15242584}
+  m_LocalPosition: {x: 1004.90106, y: 92.25688, z: 592.7799}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1784,6 +1788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Battery (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7962922080639634249, guid: 69bdc93a279e30e4dac51c95ed040e54, type: 3}
+      propertyPath: m_TagString
+      value: pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1844,6 +1852,10 @@ PrefabInstance:
     - target: {fileID: 7962922080639634249, guid: 69bdc93a279e30e4dac51c95ed040e54, type: 3}
       propertyPath: m_Name
       value: Battery (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7962922080639634249, guid: 69bdc93a279e30e4dac51c95ed040e54, type: 3}
+      propertyPath: m_TagString
+      value: pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2226,6 +2238,7 @@ MonoBehaviour:
   doorOpenTime: 3
   doorOpenSound: {fileID: 8300000, guid: a7a46655edb681147879b7107429f76e, type: 3}
   doorShutSound: {fileID: 8300000, guid: 31885ee7837c740449681079db8f5fa5, type: 3}
+  pickupCollectSound: {fileID: 8300000, guid: 66640ea0c7a104665b27f562d014d7cf, type: 3}
 --- !u!82 &5393215579111688483
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2589,8 +2602,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Battery
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1405509322089442335, guid: 69bdc93a279e30e4dac51c95ed040e54, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

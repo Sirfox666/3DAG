@@ -21,6 +21,9 @@ public class PlayerCollision : MonoBehaviour
 
     private bool doorIsOpen; // To determine current state of door 
 
+    // Battery sound 
+    [SerializeField] private AudioClip pickupCollectSound; 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -50,10 +53,12 @@ public class PlayerCollision : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         // check if the player hits an object with the houseDoor tag
-        if(hit.gameObject.CompareTag("houseDoor"))
+        if(hit.gameObject.CompareTag("houseDoor") && PickupCollect.pickupAmount >= 4)
         {
             // print("Hit the door!");
             OpenDoor();
+
+            PickupCollect.hud.enabled = false; 
         }
     }
 
@@ -87,5 +92,18 @@ public class PlayerCollision : MonoBehaviour
         
         // Set Animator parameter
         doorAnimator.SetBool("doorOpen", false);
+    }
+
+    // pickup collection
+    void OnTriggerEnter(Collider coll)
+    {
+        if(coll.gameObject.CompareTag("pickup"))
+        {
+            PickupCollect.pickupAmount++;
+
+             audio.PlayOneShot(pickupCollectSound);
+
+             Destroy(coll.gameObject);
+        }
     }
 }

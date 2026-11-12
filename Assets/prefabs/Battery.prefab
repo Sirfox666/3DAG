@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bbe0081cfb7214488bcefb4e6214152d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 62.315063
+      value: 62.586
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bbe0081cfb7214488bcefb4e6214152d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Battery
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: bbe0081cfb7214488bcefb4e6214152d, type: 3}
+      propertyPath: m_TagString
+      value: pickup
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -5716681864270162303, guid: bbe0081cfb7214488bcefb4e6214152d, type: 3}
     m_RemovedGameObjects: []
@@ -71,9 +75,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: bbe0081cfb7214488bcefb4e6214152d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7334588862591037625}
-    - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: bbe0081cfb7214488bcefb4e6214152d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1405509322089442335}
   m_SourcePrefab: {fileID: 100100000, guid: bbe0081cfb7214488bcefb4e6214152d, type: 3}
 --- !u!1 &7962922080639634249 stripped
 GameObject:
@@ -116,15 +117,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateObject
   rotationSpeed: 200
---- !u!114 &1405509322089442335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7962922080639634249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 710fb539ea86e2042a899a0dc998a4a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BatteryCollect

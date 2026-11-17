@@ -8,6 +8,7 @@ TagManager:
   - CinemachineTarget
   - houseDoor
   - pickup
+  - water
   layers:
   - Default
   - TransparentFX

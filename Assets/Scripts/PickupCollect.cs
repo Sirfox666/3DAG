@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pickupcollect: MonoBehaviour
+public class PickupCollect: MonoBehaviour
 {
     //Battery collectiom logic 
 
